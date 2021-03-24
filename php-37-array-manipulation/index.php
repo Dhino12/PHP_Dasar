@@ -33,4 +33,6 @@ $complete_name = [
 foreach ($complete_name as $key => $value) {
     echo "nama $key : " . $value . "<br>\n";
 }
-?>
+
+echo "===== print struktur array ======\n";
+print_r($complete_name);
