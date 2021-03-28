@@ -13,3 +13,5 @@ $manager1->sayHello("Chiya");
 echo Helper\APPLICATION . PHP_EOL;
 
 Helper\helpMe();
+
+// scara default code ditempatkan di namespace global
