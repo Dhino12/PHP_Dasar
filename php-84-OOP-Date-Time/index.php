@@ -6,10 +6,10 @@ var_dump($date);
 
 $date->setDate(2021, 3, 28);
 $date->setTime(12, 12, 12);
-echo "=== after set === \n";
+echo "\n=== after set === \n";
 var_dump($date);
 
-echo "=== DateInterval === \n";
+echo "\n=== DateInterval === \n";
 // https://www.php.net/manual/en/dateinterval.construct.php
 // P = period
 // Y = Year
@@ -29,12 +29,13 @@ $date->add($dateInterval);
 // ===================
 var_dump($date);
 
-echo "=== DateTimeZone === \n";
+echo "\n=== DateTimeZone === \n";
 $tanggal = new DateTime();
 $tanggal->setTimezone(new DateTimeZone("Asia/Jakarta"));
 var_dump($tanggal);
 
-echo "=== Format DateTime === \n";
+echo "\n=== Format DateTime === \n";
+// DateTime to String
 // https://www.php.net/manual/en/datetime.format.php
 // Y = Year dalam 4 digit
 // m = month dalam 2 digit
@@ -42,4 +43,11 @@ echo "=== Format DateTime === \n";
 // H = hours dalam 2 digit
 // i = minuts dalam 2 digit
 // s = second dalam 2 digit
-echo $tanggal->format("Y-m-d H:i:s") . PHP_EOL;
+echo "Waktu saat ini " .  $tanggal->format("Y-m-d H:i:s") . PHP_EOL;
+
+echo "\n=== Parse DateTime === \n";
+// parsing dari string ke DateTime
+// jika salah input kemablikannya false boolean
+$tanggal2 = DateTime::createFromFormat("Y-m-d H:i:s","2021-12-28 10:10:10", new DateTimeZone("Asia/Jakarta"));
+
+var_dump($tanggal2);
