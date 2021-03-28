@@ -7,4 +7,4 @@
 | preg_replace($pattern, $replacement, $subject)    | Digunakan untuk mereplace semua pattern dengan replacement |
 | preg_split($pattern, $subject)                    | Digunakan untuk memotong dengan pattern menjadi array      |
 
-(https://www.php.net/manual/en/pcre.pattern.php)[https://www.php.net/manual/en/pcre.pattern.php]
+[PHP Guideline Pattern](https://www.php.net/manual/en/pcre.pattern.php "https://www.php.net/manual/en/pcre.pattern.php")
